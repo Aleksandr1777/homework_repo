@@ -11,8 +11,20 @@ function addStudent() {
     const date = document.getElementById("date").value;
     const sex = document.getElementById("sex").value;
 
+    if(name===""){
+        alert("Вы не ввели имя. Попробуйте ещё раз");
+        clear();
+        return;
+    }
+
+    if(date===""){
+        alert("Вы не ввели дату. Попробуйте ещё раз");
+        clear();
+        return;
+    }
+
     if(new Date(date)>new Date()){
-        alert("Вы ввели недопустимый возраст");
+        alert("Вы ввели недопустимую дату");
         clear();
         return;
     }
